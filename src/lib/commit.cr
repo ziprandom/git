@@ -9,6 +9,8 @@ module Git
     @id      : String?
     @message : String?
     @author  : Signature?
+    @committer  : Signature?
+    @time    : Int32?
 
     #
     # the commit message
@@ -29,6 +31,20 @@ module Git
     #
     def author : Signature
       @author ||= Signature.new(Safe::Signature.free C.commit_author(@safe))
+    end
+
+    #
+    # the commiter signature
+    #
+    def committer : Signature
+      @committer ||= Signature.new(Safe::Signature.free C.commit_committer(@safe))
+    end
+
+    #
+    # Timestamp for this commit unix epoch
+    #
+    def time : Int32
+      @time ||= C.commit_time(@safe).to_i32
     end
 
     def to_tree : Tree
