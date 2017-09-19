@@ -373,7 +373,9 @@ module Git
       def initialize(@repo : Repo)
         Safe.call :revwalk_new, out @walk, @repo.safe
         C.revwalk_sorting @walk, C::SortTopological | C::SortTime
-        Safe.call :revwalk_push_head, @walk
+        if @repo.head?
+          Safe.call :revwalk_push_head, @walk
+        end
         Safe.call :revwalk_hide_glob, @walk, "tags/*"
       end
 
@@ -382,8 +384,10 @@ module Git
       #
       def next : Commit | Iterator::Stop
         unless C.revwalk_next(out next_oid, @walk) == 0
+          C.revwalk_free @walk if @walk
           return Iterator::Stop::INSTANCE
         end
+
         C.commit_lookup out commit, @repo.safe, pointerof(next_oid)
         Commit.new @repo, Safe::Commit.free(commit)
       end
