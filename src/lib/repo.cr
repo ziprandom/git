@@ -319,7 +319,7 @@ module Git
 
     def lookup_tree(oid : Oid)
       Safe.call :tree_lookup, out tree, @safe, oid.safe.p
-      Tree.new(Safe::Tree.free(tree))
+      Tree.new(self, Safe::Tree.free(tree))
     end
 
     def create_commit(tree : Tree, message : String, update_ref : String? = nil, signature : Signature? = nil, message_encoding : String? = nil, parents : Commit | Array(Commit) | Nil = nil)
