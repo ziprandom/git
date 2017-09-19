@@ -158,8 +158,13 @@ module Git
     # Creates a reference that points to HEAD.
     #
     # Creates a initial commit first if the head is unborn.
-    def create_ref(name : String, initial_commit_message : String? = "initial", force = false)
-      create_commit message: initial_commit_message if !head?
+    def create_ref(name : String, initial_commit_message : String? = "initial", signature : Signature? = nil, force = false)
+      raise "invalid refname #{name}" unless Safe.call :reference_is_valid_name, name
+      unless head?
+        set_head(
+          create_commit message: initial_commit_message, update_ref: nil, signature: signature
+        )
+      end
       create_ref(name, head.to_oid, force: force)
     end
 
