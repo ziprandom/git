@@ -377,7 +377,10 @@ module Git
         Safe.call :revwalk_hide_glob, @walk, "tags/*"
       end
 
-      def next
+      #
+      # return the next `Commit` of the Iterator
+      #
+      def next : Commit
         unless C.revwalk_next(out next_oid, @walk) == 0
           return Iterator::Stop::INSTANCE
         end

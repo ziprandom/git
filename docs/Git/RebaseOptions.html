@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/ziprandom/git">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>Git::RebaseOptions - github.com/ziprandom/git</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/ziprandom/git/Git" data-name="git">
+      <a href="../Git.html">Git</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/AnnotatedCommit" data-name="git::annotatedcommit">
+      <a href="../Git/AnnotatedCommit.html">AnnotatedCommit</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/CallbackPayload" data-name="git::callbackpayload">
+      <a href="../Git/CallbackPayload.html">CallbackPayload</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/CheckoutOptions" data-name="git::checkoutoptions">
+      <a href="../Git/CheckoutOptions.html">CheckoutOptions</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Commit" data-name="git::commit">
+      <a href="../Git/Commit.html">Commit</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Credentials" data-name="git::credentials">
+      <a href="../Git/Credentials.html">Credentials</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Credentials/Base" data-name="git::credentials::base">
+      <a href="../Git/Credentials/Base.html">Base</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Credentials/SshKey" data-name="git::credentials::sshkey">
+      <a href="../Git/Credentials/SshKey.html">SshKey</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Diff" data-name="git::diff">
+      <a href="../Git/Diff.html">Diff</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/DiffDelta" data-name="git::diffdelta">
+      <a href="../Git/DiffDelta.html">DiffDelta</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/DiffFile" data-name="git::difffile">
+      <a href="../Git/DiffFile.html">DiffFile</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/DiffOptions" data-name="git::diffoptions">
+      <a href="../Git/DiffOptions.html">DiffOptions</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Dir" data-name="git::dir">
+      <a href="../Git/Dir.html">Dir</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Exception" data-name="git::exception">
+      <a href="../Git/Exception.html">Exception</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/FetchOptions" data-name="git::fetchoptions">
+      <a href="../Git/FetchOptions.html">FetchOptions</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Index" data-name="git::index">
+      <a href="../Git/Index.html">Index</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/IndexConflictIterator" data-name="git::indexconflictiterator">
+      <a href="../Git/IndexConflictIterator.html">IndexConflictIterator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/IndexEntry" data-name="git::indexentry">
+      <a href="../Git/IndexEntry.html">IndexEntry</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/InvalidUrl" data-name="git::invalidurl">
+      <a href="../Git/InvalidUrl.html">InvalidUrl</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/MergeConflict" data-name="git::mergeconflict">
+      <a href="../Git/MergeConflict.html">MergeConflict</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/MergeOptions" data-name="git::mergeoptions">
+      <a href="../Git/MergeOptions.html">MergeOptions</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/NotExactLocation" data-name="git::notexactlocation">
+      <a href="../Git/NotExactLocation.html">NotExactLocation</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Object" data-name="git::object">
+      <a href="../Git/Object.html">Object</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Oid" data-name="git::oid">
+      <a href="../Git/Oid.html">Oid</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Options" data-name="git::options">
+      <a href="../Git/Options.html">Options</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/PushOptions" data-name="git::pushoptions">
+      <a href="../Git/PushOptions.html">PushOptions</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Rebase" data-name="git::rebase">
+      <a href="../Git/Rebase.html">Rebase</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/ziprandom/git/Git/RebaseOptions" data-name="git::rebaseoptions">
+      <a href="../Git/RebaseOptions.html">RebaseOptions</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Ref" data-name="git::ref">
+      <a href="../Git/Ref.html">Ref</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Refspec" data-name="git::refspec">
+      <a href="../Git/Refspec.html">Refspec</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Remote" data-name="git::remote">
+      <a href="../Git/Remote.html">Remote</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Repo" data-name="git::repo">
+      <a href="../Git/Repo.html">Repo</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Repo/CommitIterator" data-name="git::repo::commititerator">
+      <a href="../Git/Repo/CommitIterator.html">CommitIterator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Repo/ReferenceCallbackPayload" data-name="git::repo::referencecallbackpayload">
+      <a href="../Git/Repo/ReferenceCallbackPayload.html">ReferenceCallbackPayload</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe" data-name="git::safe">
+      <a href="../Git/Safe.html">Safe</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/AnnotatedCommit" data-name="git::safe::annotatedcommit">
+      <a href="../Git/Safe/AnnotatedCommit.html">AnnotatedCommit</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/AnnotatedCommit/AsFree" data-name="git::safe::annotatedcommit::asfree">
+      <a href="../Git/Safe/AnnotatedCommit/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/AnnotatedCommit/Free" data-name="git::safe::annotatedcommit::free">
+      <a href="../Git/Safe/AnnotatedCommit/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/AnnotatedCommit/Type" data-name="git::safe::annotatedcommit::type">
+      <a href="../Git/Safe/AnnotatedCommit/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/AnnotatedCommit/Unfree" data-name="git::safe::annotatedcommit::unfree">
+      <a href="../Git/Safe/AnnotatedCommit/Unfree.html">Unfree</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Call" data-name="git::safe::call">
+      <a href="../Git/Safe/Call.html">Call</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/CallError" data-name="git::safe::callerror">
+      <a href="../Git/Safe/CallError.html">CallError</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/CheckoutOptions" data-name="git::safe::checkoutoptions">
+      <a href="../Git/Safe/CheckoutOptions.html">CheckoutOptions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/CheckoutOptions/Type" data-name="git::safe::checkoutoptions::type">
+      <a href="../Git/Safe/CheckoutOptions/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/CheckoutOptions/Unfree" data-name="git::safe::checkoutoptions::unfree">
+      <a href="../Git/Safe/CheckoutOptions/Unfree.html">Unfree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/CheckoutOptions/Value" data-name="git::safe::checkoutoptions::value">
+      <a href="../Git/Safe/CheckoutOptions/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/Commit" data-name="git::safe::commit">
+      <a href="../Git/Safe/Commit.html">Commit</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Commit/AsFree" data-name="git::safe::commit::asfree">
+      <a href="../Git/Safe/Commit/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Commit/Free" data-name="git::safe::commit::free">
+      <a href="../Git/Safe/Commit/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Commit/Type" data-name="git::safe::commit::type">
+      <a href="../Git/Safe/Commit/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Commit/Unfree" data-name="git::safe::commit::unfree">
+      <a href="../Git/Safe/Commit/Unfree.html">Unfree</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/Diff" data-name="git::safe::diff">
+      <a href="../Git/Safe/Diff.html">Diff</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Diff/AsFree" data-name="git::safe::diff::asfree">
+      <a href="../Git/Safe/Diff/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Diff/Free" data-name="git::safe::diff::free">
+      <a href="../Git/Safe/Diff/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Diff/Type" data-name="git::safe::diff::type">
+      <a href="../Git/Safe/Diff/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Diff/Unfree" data-name="git::safe::diff::unfree">
+      <a href="../Git/Safe/Diff/Unfree.html">Unfree</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/DiffDelta" data-name="git::safe::diffdelta">
+      <a href="../Git/Safe/DiffDelta.html">DiffDelta</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/DiffDelta/AsFree" data-name="git::safe::diffdelta::asfree">
+      <a href="../Git/Safe/DiffDelta/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/DiffDelta/Free" data-name="git::safe::diffdelta::free">
+      <a href="../Git/Safe/DiffDelta/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/DiffDelta/Type" data-name="git::safe::diffdelta::type">
+      <a href="../Git/Safe/DiffDelta/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/DiffDelta/Unfree" data-name="git::safe::diffdelta::unfree">
+      <a href="../Git/Safe/DiffDelta/Unfree.html">Unfree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/DiffDelta/Value" data-name="git::safe::diffdelta::value">
+      <a href="../Git/Safe/DiffDelta/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/DiffFile" data-name="git::safe::difffile">
+      <a href="../Git/Safe/DiffFile.html">DiffFile</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/DiffFile/AsFree" data-name="git::safe::difffile::asfree">
+      <a href="../Git/Safe/DiffFile/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/DiffFile/Free" data-name="git::safe::difffile::free">
+      <a href="../Git/Safe/DiffFile/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/DiffFile/Type" data-name="git::safe::difffile::type">
+      <a href="../Git/Safe/DiffFile/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/DiffFile/Unfree" data-name="git::safe::difffile::unfree">
+      <a href="../Git/Safe/DiffFile/Unfree.html">Unfree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/DiffFile/Value" data-name="git::safe::difffile::value">
+      <a href="../Git/Safe/DiffFile/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/DiffOptions" data-name="git::safe::diffoptions">
+      <a href="../Git/Safe/DiffOptions.html">DiffOptions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/DiffOptions/Type" data-name="git::safe::diffoptions::type">
+      <a href="../Git/Safe/DiffOptions/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/DiffOptions/Unfree" data-name="git::safe::diffoptions::unfree">
+      <a href="../Git/Safe/DiffOptions/Unfree.html">Unfree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/DiffOptions/Value" data-name="git::safe::diffoptions::value">
+      <a href="../Git/Safe/DiffOptions/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/FetchOptions" data-name="git::safe::fetchoptions">
+      <a href="../Git/Safe/FetchOptions.html">FetchOptions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/FetchOptions/Type" data-name="git::safe::fetchoptions::type">
+      <a href="../Git/Safe/FetchOptions/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/FetchOptions/Unfree" data-name="git::safe::fetchoptions::unfree">
+      <a href="../Git/Safe/FetchOptions/Unfree.html">Unfree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/FetchOptions/Value" data-name="git::safe::fetchoptions::value">
+      <a href="../Git/Safe/FetchOptions/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/Index" data-name="git::safe::index">
+      <a href="../Git/Safe/Index.html">Index</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Index/AsFree" data-name="git::safe::index::asfree">
+      <a href="../Git/Safe/Index/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Index/Free" data-name="git::safe::index::free">
+      <a href="../Git/Safe/Index/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Index/Type" data-name="git::safe::index::type">
+      <a href="../Git/Safe/Index/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Index/Unfree" data-name="git::safe::index::unfree">
+      <a href="../Git/Safe/Index/Unfree.html">Unfree</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/IndexConflictIterator" data-name="git::safe::indexconflictiterator">
+      <a href="../Git/Safe/IndexConflictIterator.html">IndexConflictIterator</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/IndexConflictIterator/AsFree" data-name="git::safe::indexconflictiterator::asfree">
+      <a href="../Git/Safe/IndexConflictIterator/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/IndexConflictIterator/Free" data-name="git::safe::indexconflictiterator::free">
+      <a href="../Git/Safe/IndexConflictIterator/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/IndexConflictIterator/Type" data-name="git::safe::indexconflictiterator::type">
+      <a href="../Git/Safe/IndexConflictIterator/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/IndexConflictIterator/Unfree" data-name="git::safe::indexconflictiterator::unfree">
+      <a href="../Git/Safe/IndexConflictIterator/Unfree.html">Unfree</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/IndexEntry" data-name="git::safe::indexentry">
+      <a href="../Git/Safe/IndexEntry.html">IndexEntry</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/IndexEntry/AsFree" data-name="git::safe::indexentry::asfree">
+      <a href="../Git/Safe/IndexEntry/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/IndexEntry/Free" data-name="git::safe::indexentry::free">
+      <a href="../Git/Safe/IndexEntry/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/IndexEntry/Type" data-name="git::safe::indexentry::type">
+      <a href="../Git/Safe/IndexEntry/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/IndexEntry/Unfree" data-name="git::safe::indexentry::unfree">
+      <a href="../Git/Safe/IndexEntry/Unfree.html">Unfree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/IndexEntry/Value" data-name="git::safe::indexentry::value">
+      <a href="../Git/Safe/IndexEntry/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/MergeOptions" data-name="git::safe::mergeoptions">
+      <a href="../Git/Safe/MergeOptions.html">MergeOptions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/MergeOptions/Type" data-name="git::safe::mergeoptions::type">
+      <a href="../Git/Safe/MergeOptions/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/MergeOptions/Unfree" data-name="git::safe::mergeoptions::unfree">
+      <a href="../Git/Safe/MergeOptions/Unfree.html">Unfree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/MergeOptions/Value" data-name="git::safe::mergeoptions::value">
+      <a href="../Git/Safe/MergeOptions/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/Object" data-name="git::safe::object">
+      <a href="../Git/Safe/Object.html">Object</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Object/AsFree" data-name="git::safe::object::asfree">
+      <a href="../Git/Safe/Object/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Object/Free" data-name="git::safe::object::free">
+      <a href="../Git/Safe/Object/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Object/Type" data-name="git::safe::object::type">
+      <a href="../Git/Safe/Object/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Object/Unfree" data-name="git::safe::object::unfree">
+      <a href="../Git/Safe/Object/Unfree.html">Unfree</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/Oid" data-name="git::safe::oid">
+      <a href="../Git/Safe/Oid.html">Oid</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Oid/AsFree" data-name="git::safe::oid::asfree">
+      <a href="../Git/Safe/Oid/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Oid/Free" data-name="git::safe::oid::free">
+      <a href="../Git/Safe/Oid/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Oid/Type" data-name="git::safe::oid::type">
+      <a href="../Git/Safe/Oid/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Oid/Unfree" data-name="git::safe::oid::unfree">
+      <a href="../Git/Safe/Oid/Unfree.html">Unfree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Oid/Value" data-name="git::safe::oid::value">
+      <a href="../Git/Safe/Oid/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/PushOptions" data-name="git::safe::pushoptions">
+      <a href="../Git/Safe/PushOptions.html">PushOptions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/PushOptions/Type" data-name="git::safe::pushoptions::type">
+      <a href="../Git/Safe/PushOptions/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/PushOptions/Unfree" data-name="git::safe::pushoptions::unfree">
+      <a href="../Git/Safe/PushOptions/Unfree.html">Unfree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/PushOptions/Value" data-name="git::safe::pushoptions::value">
+      <a href="../Git/Safe/PushOptions/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/Rebase" data-name="git::safe::rebase">
+      <a href="../Git/Safe/Rebase.html">Rebase</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Rebase/AsFree" data-name="git::safe::rebase::asfree">
+      <a href="../Git/Safe/Rebase/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Rebase/Free" data-name="git::safe::rebase::free">
+      <a href="../Git/Safe/Rebase/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Rebase/Type" data-name="git::safe::rebase::type">
+      <a href="../Git/Safe/Rebase/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Rebase/Unfree" data-name="git::safe::rebase::unfree">
+      <a href="../Git/Safe/Rebase/Unfree.html">Unfree</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/RebaseOptions" data-name="git::safe::rebaseoptions">
+      <a href="../Git/Safe/RebaseOptions.html">RebaseOptions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/RebaseOptions/Type" data-name="git::safe::rebaseoptions::type">
+      <a href="../Git/Safe/RebaseOptions/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/RebaseOptions/Unfree" data-name="git::safe::rebaseoptions::unfree">
+      <a href="../Git/Safe/RebaseOptions/Unfree.html">Unfree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/RebaseOptions/Value" data-name="git::safe::rebaseoptions::value">
+      <a href="../Git/Safe/RebaseOptions/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/Reference" data-name="git::safe::reference">
+      <a href="../Git/Safe/Reference.html">Reference</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Reference/AsFree" data-name="git::safe::reference::asfree">
+      <a href="../Git/Safe/Reference/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Reference/Free" data-name="git::safe::reference::free">
+      <a href="../Git/Safe/Reference/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Reference/Type" data-name="git::safe::reference::type">
+      <a href="../Git/Safe/Reference/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Reference/Unfree" data-name="git::safe::reference::unfree">
+      <a href="../Git/Safe/Reference/Unfree.html">Unfree</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/Remote" data-name="git::safe::remote">
+      <a href="../Git/Safe/Remote.html">Remote</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Remote/AsFree" data-name="git::safe::remote::asfree">
+      <a href="../Git/Safe/Remote/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Remote/Free" data-name="git::safe::remote::free">
+      <a href="../Git/Safe/Remote/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Remote/Type" data-name="git::safe::remote::type">
+      <a href="../Git/Safe/Remote/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Remote/Unfree" data-name="git::safe::remote::unfree">
+      <a href="../Git/Safe/Remote/Unfree.html">Unfree</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/Repository" data-name="git::safe::repository">
+      <a href="../Git/Safe/Repository.html">Repository</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Repository/AsFree" data-name="git::safe::repository::asfree">
+      <a href="../Git/Safe/Repository/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Repository/Free" data-name="git::safe::repository::free">
+      <a href="../Git/Safe/Repository/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Repository/Type" data-name="git::safe::repository::type">
+      <a href="../Git/Safe/Repository/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Repository/Unfree" data-name="git::safe::repository::unfree">
+      <a href="../Git/Safe/Repository/Unfree.html">Unfree</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/Signature" data-name="git::safe::signature">
+      <a href="../Git/Safe/Signature.html">Signature</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Signature/AsFree" data-name="git::safe::signature::asfree">
+      <a href="../Git/Safe/Signature/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Signature/Free" data-name="git::safe::signature::free">
+      <a href="../Git/Safe/Signature/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Signature/Type" data-name="git::safe::signature::type">
+      <a href="../Git/Safe/Signature/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Signature/Unfree" data-name="git::safe::signature::unfree">
+      <a href="../Git/Safe/Signature/Unfree.html">Unfree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Signature/Value" data-name="git::safe::signature::value">
+      <a href="../Git/Safe/Signature/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/StaticStrarray" data-name="git::safe::staticstrarray">
+      <a href="../Git/Safe/StaticStrarray.html">StaticStrarray</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/Strarray" data-name="git::safe::strarray">
+      <a href="../Git/Safe/Strarray.html">Strarray</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Strarray/AsFree" data-name="git::safe::strarray::asfree">
+      <a href="../Git/Safe/Strarray/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Strarray/Free" data-name="git::safe::strarray::free">
+      <a href="../Git/Safe/Strarray/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Strarray/Type" data-name="git::safe::strarray::type">
+      <a href="../Git/Safe/Strarray/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Strarray/Unfree" data-name="git::safe::strarray::unfree">
+      <a href="../Git/Safe/Strarray/Unfree.html">Unfree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Strarray/Value" data-name="git::safe::strarray::value">
+      <a href="../Git/Safe/Strarray/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Safe/Tree" data-name="git::safe::tree">
+      <a href="../Git/Safe/Tree.html">Tree</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Tree/AsFree" data-name="git::safe::tree::asfree">
+      <a href="../Git/Safe/Tree/AsFree.html">AsFree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Tree/Free" data-name="git::safe::tree::free">
+      <a href="../Git/Safe/Tree/Free.html">Free</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Tree/Type" data-name="git::safe::tree::type">
+      <a href="../Git/Safe/Tree/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Safe/Tree/Unfree" data-name="git::safe::tree::unfree">
+      <a href="../Git/Safe/Tree/Unfree.html">Unfree</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Signature" data-name="git::signature">
+      <a href="../Git/Signature.html">Signature</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Strarray" data-name="git::strarray">
+      <a href="../Git/Strarray.html">Strarray</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Tree" data-name="git::tree">
+      <a href="../Git/Tree.html">Tree</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Url" data-name="git::url">
+      <a href="../Git/Url.html">Url</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/ziprandom/git/Git/Util" data-name="git::util">
+      <a href="../Git/Util.html">Util</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/ziprandom/git/Git/Util/Memo" data-name="git::util::memo(t)">
+      <a href="../Git/Util/Memo.html">Memo</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Git::RebaseOptions
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Git/RebaseOptions.html">Git::RebaseOptions</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>Extended Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../Git/Options.html">Git::Options</a></li>
+  
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/ziprandom/git/blob/74eaa36513826e573d0f8fb84a62fa2308ee86ab/src/lib/rebase_options.cr#L2" target="_blank">lib/rebase_options.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28safe%29-class-method" class="signature"><strong>.new</strong>(safe)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#dup-instance-method" class="signature"><strong>#dup</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#p-instance-method" class="signature"><strong>#p</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#safe%3AGit%3A%3ASafe%3A%3ARebaseOptions%3A%3AType-instance-method" class="signature"><strong>#safe</strong> : Git::Safe::RebaseOptions::Type</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#value-instance-method" class="signature"><strong>#value</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new&#40;safe&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(safe)
+
+        <a class="method-permalink" href="#new%28safe%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ziprandom/git/blob/74eaa36513826e573d0f8fb84a62fa2308ee86ab/src/lib/rebase_options.cr#L3" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>
+
+        <a class="method-permalink" href="#new-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ziprandom/git/blob/74eaa36513826e573d0f8fb84a62fa2308ee86ab/src/lib/rebase_options.cr#L3" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="dup-instance-method">
+      <div class="signature">
+        
+        def <strong>dup</strong>
+
+        <a class="method-permalink" href="#dup-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ziprandom/git/blob/74eaa36513826e573d0f8fb84a62fa2308ee86ab/src/lib/rebase_options.cr#L3" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="p-instance-method">
+      <div class="signature">
+        
+        def <strong>p</strong>
+
+        <a class="method-permalink" href="#p-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ziprandom/git/blob/74eaa36513826e573d0f8fb84a62fa2308ee86ab/src/lib/rebase_options.cr#L3" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="safe:Git::Safe::RebaseOptions::Type-instance-method">
+      <div class="signature">
+        
+        def <strong>safe</strong> : <a href="../Git/Safe/RebaseOptions/Type.html">Git::Safe::RebaseOptions::Type</a>
+
+        <a class="method-permalink" href="#safe%3AGit%3A%3ASafe%3A%3ARebaseOptions%3A%3AType-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="value-instance-method">
+      <div class="signature">
+        
+        def <strong>value</strong>
+
+        <a class="method-permalink" href="#value-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/ziprandom/git/blob/74eaa36513826e573d0f8fb84a62fa2308ee86ab/src/lib/rebase_options.cr#L3" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
