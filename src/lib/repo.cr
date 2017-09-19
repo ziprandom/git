@@ -360,5 +360,39 @@ module Git
       payload.callback = block
       Safe.call :reference_foreach_name, @safe, @@reference_foreach_name_callback, Box(ReferenceCallbackPayload).box(payload)
     end
+
+    #
+    # An `Iterator` to lazily retrieve commits
+    # from `git_revwalk`
+    #
+    class CommitIterator
+      include Iterator(Commit)
+
+      @walk : C::X_Revwalk
+
+      def initialize(@repo : Repo)
+        Safe.call :revwalk_new, out @walk, @repo.safe
+        C.revwalk_sorting @walk, C::SortTopological | C::SortTime
+        Safe.call :revwalk_push_head, @walk
+        Safe.call :revwalk_hide_glob, @walk, "tags/*"
+      end
+
+      def next
+        unless C.revwalk_next(out next_oid, @walk) == 0
+          return Iterator::Stop::INSTANCE
+        end
+        C.commit_lookup out commit, @repo.safe, pointerof(next_oid)
+        Commit.new @repo, Safe::Commit.free(commit)
+      end
+
+    end
+
+    #
+    # Iterate over the repositories commits
+    #
+    def commits : CommitIterator
+      CommitIterator.new(self)
+    end
+
   end
 end
