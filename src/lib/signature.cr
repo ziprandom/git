@@ -10,6 +10,14 @@ module Git
     end
 
     #
+    # Initialize a new signature with name and email
+    #
+    def initialize(name : String, email : String)
+      Safe.call :signature_new, out safe, name, email, Time.now.epoch, 0
+      @safe = Safe::Signature.free safe
+    end
+
+    #
     # The name associated with the signature
     #
     def name : String
