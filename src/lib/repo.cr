@@ -380,7 +380,7 @@ module Git
       #
       # return the next `Commit` of the Iterator
       #
-      def next : Commit
+      def next : Commit | Iterator::Stop
         unless C.revwalk_next(out next_oid, @walk) == 0
           return Iterator::Stop::INSTANCE
         end
