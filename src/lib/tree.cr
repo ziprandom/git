@@ -6,6 +6,10 @@ module Git
     def initialize(@repo, @safe)
     end
 
+    def initialize(@repo, oid : Oid)
+      Safe.call :tree_lookup, out tree, @repo.safe, oid.safe.p
+      @safe = Safe::Tree.free tree
+    end
     #
     # Diff the tree against another tree or the empty
     # tree if other is undefined in the given Repo
@@ -25,7 +29,7 @@ module Git
       Safe.call :object_lookup_bypath,
         out object, @safe.to_unsafe.as(Git::C::X_Object),
             path, type
-      Git::Object.new @repo, Git::Safe::Object.free object
+      Git::Object.new Git::Safe::Object.free object
     end
   end
 end

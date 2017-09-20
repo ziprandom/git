@@ -19,9 +19,14 @@ module Git
       end
     end
 
+    def to_s
+      string
+    end
+
     def self.from(s : String)
       Safe.call :oid_fromstrp, out oid, s
       Oid.new(Safe::Oid.value(oid))
     end
+
   end
 end

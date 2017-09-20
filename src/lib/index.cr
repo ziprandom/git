@@ -36,6 +36,10 @@ module Git
       end
     end
 
+    def add_from_string(path, content)
+      Safe.call :index_add_frombuffer, @safe, path, pointerof(content), content.size
+    end
+
     def write_tree
       Safe.call :index_write_tree, out oid, @safe
       Oid.new(Safe::Oid.value(oid))

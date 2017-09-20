@@ -1,9 +1,13 @@
 module Git
   class Object
-    getter repo : Repo
     getter safe : Safe::Object::Type
 
-    def initialize(@repo, @safe)
+    def initialize(@safe)
+    end
+
+    def self.blob_from_string(repo, content : String)
+      Safe.call :blob_create_frombuffer, out oid, repo.safe, content, content.size
+      Oid.new Safe::Oid.value oid
     end
 
     def type

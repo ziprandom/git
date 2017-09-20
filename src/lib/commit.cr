@@ -6,6 +6,11 @@ module Git
     def initialize(@repo, @safe)
     end
 
+    def initialize(@repo, oid : Oid)
+      Safe.call :commit_lookup, out commit, @repo.safe, oid.safe.p
+      @safe = Safe::Commit.free commit
+    end
+
     @id      : String?
     @message : String?
     @author  : Signature?
@@ -17,6 +22,27 @@ module Git
     #
     def message : String
       @message ||= Safe.string(:commit_message_raw, @safe)
+    end
+
+    #
+    # get the parents of this commit
+    #
+    def parents : Array(Commit)
+      parentcount = C.commit_parentcount(@safe).to_i32
+      parentcount.times.to_a.map do |index|
+        Safe.call :commit_parent, out commit, @safe, index
+        self.class.new @repo, Safe::Commit.free commit
+      end
+    end
+
+    #
+    # Format the Commit as an Email
+    #
+    def as_email
+      Safe.call :diff_init_options, out options, 1
+      buf = C::Buf.allocate
+      Safe.call :diff_commit_as_email, pointerof(buf), @repo.safe, @safe, 1, 1, C::DiffFormatEmailFlagsT::DiffFormatEmailExcludeSubjectPatchMarker, pointerof(options)
+      String.new Slice.new buf.ptr, buf.size
     end
 
     #

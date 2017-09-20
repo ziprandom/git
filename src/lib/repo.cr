@@ -96,7 +96,7 @@ module Git
 
     def parse_rev(spec : String)
       Safe.call :revparse_single, out obj, @safe, spec
-      Object.new(self, Safe::Object.free(obj))
+      Object.new(Safe::Object.free(obj))
     end
 
     def parse_rev?(spec : String)
@@ -120,9 +120,9 @@ module Git
       end
     end
 
-    def lookup_object(oid : Oid, type : LibC::Int = C::ObjAny)
-      Safe.call :object_lookup, out obj, @safe, oid.safe, type
-      Object.new(self, Safe::Object.safe(obj))
+    def lookup_object(oid : Oid, type : C::Otype = C::Otype::ObjAny)
+      Safe.call :object_lookup, out obj, @safe, oid.safe.p, type
+      Object.new(Safe::Object.free(obj))
     end
 
     def head
